@@ -48,6 +48,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    htop
     btop
     tree
     git
