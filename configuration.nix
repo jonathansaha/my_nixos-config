@@ -38,7 +38,7 @@
 
   users.users.nano = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel", "libvirtd" ];
     packages = with pkgs; [
     ];
   };
@@ -57,10 +57,15 @@
     brave
     firefox
     flatpak
+    libreoffice
+    dnsmasq
   ];
 
   services.flatpak.enable = true;
   xdg.portal.enable = true;
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   programs.nix-ld.enable = true;
   services.openssh.enable = true;
