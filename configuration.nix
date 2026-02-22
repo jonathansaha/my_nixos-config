@@ -38,7 +38,7 @@
 
   users.users.nano = {
     isNormalUser = true;
-    extraGroups = [ "wheel", "libvirtd" ];
+    extraGroups = [ "wheel" "libvirtd" ];
     packages = with pkgs; [
     ];
   };
