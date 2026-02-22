@@ -45,7 +45,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  
   environment.systemPackages = with pkgs; [
     vim
     wget
@@ -55,7 +54,13 @@
     nix-ld
     wayland-utils
     cloudflare-warp
+    brave
+    firefox
+    flatpak
   ];
+
+  services.flatpak.enable = true;
+  xdg.portal.enable = true;
 
   programs.nix-ld.enable = true;
   services.openssh.enable = true;
